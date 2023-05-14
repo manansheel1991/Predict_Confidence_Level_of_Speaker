@@ -20,6 +20,7 @@ from Acoustic_Features_Extraction import extract_frequency_related_information, 
 
 import keras
 from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Dense
 
 import random
@@ -92,7 +93,7 @@ model.save('Confidence_Scores_Model.hdf5', overwrite=True, include_optimizer=Tru
 
 # Make a Sample Prediction through the model
 
-model = model.load('Confidence_Scores_Model.hdf5')
+model = load_model('Confidence_Scores_Model.hdf5')
 
 xp = [[250, 350, 400, 0.05, 0.006, 5, 0.56, 0.7, 5.0]]
 
