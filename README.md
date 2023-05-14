@@ -20,7 +20,8 @@ The file 'Acoustics_Feature_Extraction.py' contains the functions used for extra
 ## Speech files used for training
 A few files from the mozilla common-voice dataset were used for training the model. In reality thousands of files are required, but a few were used for demonstration purposes in the code. The features of all the files were extracted to create a list of features that would be the independent variables for training. As there is no publicly available dataset that has confidence scores associated with it, a random array was created as the code is for demonstration purposes. The training happens in the file 'Confidence_Model_Building.py'.
 
-
+## Sample Predictions
+In the file 'Predictions_Using_The_Model.py', a prediction is made using a sample audio file not in the training dataset.
 
 
 
