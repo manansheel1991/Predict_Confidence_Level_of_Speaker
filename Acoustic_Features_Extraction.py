@@ -18,8 +18,8 @@ import io
 import os
 import re
 
-filename = 'common_voice_en (1).wav'
-temp_filename = 'common_voice_en (1)_temp.wav'
+#filename = 'common_voice_en (1).wav'
+#temp_filename = 'common_voice_en (1)_temp.wav'
 
 def extract_frequency_related_information(filename):
     
@@ -31,10 +31,10 @@ def extract_frequency_related_information(filename):
     peaks = []
     
     for chunk in chunks:
-        wave = chunk
+        wavel = chunk
         # compute the magnitude of the Fourier Transform and its corresponding frequency values
-        freq_magnitudes = np.abs(np.fft.rfft(wave))
-        freq_values = np.fft.rfftfreq(len(wave), 1/samplerate)
+        freq_magnitudes = np.abs(np.fft.rfft(wavel))
+        freq_values = np.fft.rfftfreq(len(wavel), 1/samplerate)
         # find the max. magnitude
         max_positive_freq_idx = np.argmax(freq_magnitudes)
         peaks.append(freq_values[max_positive_freq_idx])
